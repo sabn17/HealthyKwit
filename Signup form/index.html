@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#">HealthyKwit</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about">
+  </div>
+  
+  <!-- Signup form -->
+  <div class="Signup-form">
+
+    <div class="bootstrap-iso">
+      <h1>Signup Form</h1>
+  <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <form method="post">
+     <div class="form-group ">
+      <label class="control-label requiredField" for="name">
+       Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="name" name="name" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="number">
+       Age
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="number" name="number" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="gender">
+       Gender
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <select class="select form-control" id="gender" name="gender">
+       <option value="Male">
+        Male
+       </option>
+       <option value="Female">
+        Female
+       </option>
+       <option value="Other">
+        Other
+       </option>
+      </select>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="tcd">
+       Tobacco Consumption per Day
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="tcd" name="tcd" type="text"/>
+     </div>
+     <div class="form-group" id="div_Quit">
+      <label class="control-label requiredField" for="Quit">
+       Have you Tried to Quit Smoking?
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <div class="">
+       <label class="radio-inline">
+        <input name="Quit" type="radio" value="Yes"/>
+        Yes
+       </label>
+       <label class="radio-inline">
+        <input name="Quit" type="radio" value="No"/>
+        No
+       </label>
+      </div>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="familyMno">
+       Number of members in family
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="familyMno" name="familyMno" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="MaritalStatus">
+       Marital Status
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <select class="select form-control" id="MaritalStatus" name="MaritalStatus">
+       <option value="Single ">
+        Single
+       </option>
+       <option value="Married">
+        Married
+       </option>
+       <option value="Widowed">
+        Widowed
+       </option>
+       <option value="Divorced">
+        Divorced
+       </option>
+      </select>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="occupation">
+       Occupation
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <select class="select form-control" id="occupation" name="occupation">
+       <option value="Student">
+        Student
+       </option>
+       <option value="Buisness Owner">
+        Buisness Owner
+       </option>
+       <option value="Private Sector">
+        Private Sector
+       </option>
+       <option value="Public Sector">
+        Public Sector
+       </option>
+       <option value="Self Employed">
+        Self Employed
+       </option>
+      </select>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="smokingYear">
+       Since How long you are Smoking?
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="smokingYear" name="smokingYear" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="reason">
+       Why you could not quit smoking?
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <textarea class="form-control" cols="40" id="reason" name="reason" rows="10"></textarea>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-primary " name="submit" type="submit">
+        Submit
+       </button>
+
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+  </div>
+  </div>
+
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
